@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <meta name="description" content="易安梦华金种子杯逐项评估、证据自评分与补齐任务报告。">
+  <title>易安梦华 · 金种子杯逐项评分报告</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="lucide.min.js"></script>
+  <script defer src="report-data.js"></script>
+  <script defer src="report.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#report">跳到报告正文</a>
+  <header class="document-header">
+    <div class="document-topline"><a href="#overview"><i data-lucide="arrow-left" aria-hidden="true"></i>评分报告总览</a><span>内部评估 · 2026.10.22</span></div>
+    <p class="eyebrow">易安梦华 / 创业项目评估</p>
+    <h1>金种子杯逐项评分报告</h1>
+    <p class="document-deck">把每一分落到现有证据，把每一处差距落实为下一步交付。</p>
+    <div class="header-meta"><span>专业评审 13 子项</span><span>大众评审 10 子项</span><span>阶段一七章目标 · 第三章原型</span></div>
+  </header>
+
+  <div class="toolbar" id="toolbar">
+    <div class="toolbar-inner">
+      <label class="search"><i data-lucide="search" aria-hidden="true"></i><input type="search" id="search" placeholder="搜索评分要求、证据或任务" aria-label="搜索评分要求、证据或任务"><button class="icon-button clear-search" id="clearSearch" aria-label="清除搜索" title="清除搜索" hidden><i data-lucide="x" aria-hidden="true"></i></button></label>
+      <div class="toolbar-actions">
+        <span class="save-status" id="saveStatus" role="status">初始评估</span>
+        <button class="icon-button" id="importButton" aria-label="导入评分记录" title="导入评分记录"><i data-lucide="upload" aria-hidden="true"></i></button>
+        <input id="importFile" type="file" accept=".json,application/json" hidden>
+        <button class="icon-button" id="exportButton" aria-label="导出评分记录" title="导出评分记录"><i data-lucide="download" aria-hidden="true"></i></button>
+        <button class="icon-button" id="printButton" aria-label="打印或存为PDF" title="打印或存为PDF"><i data-lucide="printer" aria-hidden="true"></i></button>
+        <button class="icon-button" id="resetButton" aria-label="恢复初始评估" title="恢复初始评估"><i data-lucide="rotate-ccw" aria-hidden="true"></i></button>
+      </div>
+    </div>
+  </div>
+
+  <div class="document-layout">
+    <aside class="sidebar">
+      <details open id="navigationDetails">
+        <summary>报告目录 <i data-lucide="chevron-down" aria-hidden="true"></i></summary>
+        <nav aria-label="报告目录" id="reportNavigation">
+          <a href="#overview" data-nav="overview"><span>01</span>评估总览</a>
+          <a href="#method" data-nav="method"><span>02</span>分数与进度口径</a>
+          <p class="nav-label">专业评审 / 100分</p>
+          <div id="professionalNavigation"></div>
+          <p class="nav-label">大众评审 / 100分</p>
+          <div id="publicNavigation"></div>
+          <a href="#action-plan" data-nav="action-plan"><span>03</span>补齐任务清单</a>
+          <a href="#sources" data-nav="sources"><span>04</span>官方资料与项目证据</a>
+        </nav>
+      </details>
+      <div class="sidebar-footnote">评估基线：2026.10.22<br>资料缺失项仍需补证核实。</div>
+    </aside>
+
+    <main id="report">
+      <section class="report-section overview" id="overview" aria-labelledby="overviewHeading">
+        <div class="section-title"><span class="section-number">01</span><h2 id="overviewHeading">当前得分，依据现有材料暂计</h2></div>
+        <p class="main-finding">文化内容与研发原型已有基础；市场、财务、团队经营和湖南落地的证据仍有明显缺口。</p>
+        <p class="scope-note">内部保守自评，非官方评分或获奖预测。待核实资料暂计低分或0分，不等于真实能力为0；得分率不代表游戏研发完成度。</p>
+        <div class="score-overview" id="scoreOverview"></div>
+        <div class="review-summary"><span id="modifiedCount">初始基线</span><span id="overallTaskCount"></span></div>
+        <div class="dimension-table-wrap"><table class="dimension-table"><thead><tr><th>官方评审大项</th><th>当前 / 满分</th><th>得分率</th><th>初始基线</th></tr></thead><tbody id="dimensionRows"></tbody></table></div>
+        <div class="current-stage"><h3>研发状态：按实际验收记录</h3><ul><li><span class="state-dot verified"></span><b>已核验</b> 第三章封面进入家中、木匣互动；23项剧情、存档与香囊物理测试通过。</li><li><span class="state-dot partial"></span><b>待验收</b> 最新整章、全部关键分支、手机端与视觉终验。</li><li><span class="state-dot planned"></span><b>最终范围</b> 阶段一001—007七章连续可玩，当前第三章为施工里程碑。</li></ul></div>
+      </section>
+
+      <section class="report-section" id="method" aria-labelledby="methodHeading">
+        <div class="section-title"><span class="section-number">02</span><h2 id="methodHeading">分数、准备度与目标怎样区分</h2></div>
+        <p class="scope-note">公开阅读版：所有读者默认看到2026年10月22日的初评基线。分数、备注与任务修改仅存本人浏览器，不会同步给其他人；跨设备可导出、导入JSON。</p><div class="method-grid"><div><strong>官方大项分值</strong><p>专业五项合计100分，大众四项合计100分，严格沿用两张细则。23个子项的拆分满分属于本报告内部规则。</p></div><div><strong>当前材料自评分</strong><p>衡量现有材料能支持多少评分主张。初始专业24分、大众9分；修改后保留基线对照，缺失事实仍应补证。</p></div><div><strong>材料准备度</strong><p>独立估计该子项证据的准备程度，0—100%。它与得分分开记录，也不等于游戏开发进度。</p></div><div><strong>下一阶段复评目标</strong><p>只表示补齐列明证据后的内部复评目标。完成任务不自动加分，最终仍需重新检查证据与质量。</p></div></div>
+        <div class="method-callout"><i data-lucide="scale" aria-hidden="true"></i><p><b>现场结构模拟 = 专业自评分 × 70% + 大众自评分 × 30%。</b><br>仅用于理解现场决赛权重；网络初评、复评中的AI占比属于另一套评审安排。本页不模拟AI评审。</p></div>
+        <details class="scoring-guide"><summary>内部评分与准备度标尺</summary><div class="guide-body"><p><b>自评分：</b>0分＝当前未见对应材料；约25%＝有方向或零散依据；约50%＝有部分可核查成果；约75%＝证据较完整但仍有关键缺口；满分＝该子项所有主张已有充分证据。各档为内部判断辅助，不是官方评分档位。</p><p><b>准备度：</b>0%＝资料待建立；25%＝方向与零散材料；50%＝主要材料已有、验证不完整；75%＝核心证据齐备、待交叉核验；100%＝本轮所需证据完整并已复核。初值属于保守估计。</p></div></details>
+      </section>
+
+      <div class="assessment-heading"><div><p class="eyebrow">逐项核查</p><h2>23个子项：分数、依据与交付</h2></div><span id="filterCount">全部23项</span></div>
+      <div class="filter-row"><fieldset class="segmented" aria-label="评审类型"><legend class="sr-only">评审类型</legend><label><input type="radio" name="kind" value="all" checked><span>全部</span></label><label><input type="radio" name="kind" value="professional"><span>专业</span></label><label><input type="radio" name="kind" value="public"><span>大众</span></label></fieldset><label class="gap-filter"><input type="checkbox" id="gapOnly">仅看未满分项</label><button class="text-button" id="expandAll"><i data-lucide="unfold-vertical" aria-hidden="true"></i><span>展开全部依据</span></button></div>
+      <p class="empty-state" id="emptyState" hidden>没有符合条件的评分项。</p>
+      <div id="assessmentGroups"></div>
+
+      <section class="report-section" id="action-plan" aria-labelledby="actionHeading">
+        <div class="section-title"><span class="section-number">03</span><h2 id="actionHeading">补齐任务与下一阶段复评</h2></div>
+        <p>优先补齐已经存在但未入档的事实，再完成当前切片验收和需求验证。勾选任务只记录交付状态，不自动改变自评分。</p>
+        <div class="priority-order"><span>真实资料归档</span><i data-lucide="arrow-right" aria-hidden="true"></i><span>完整切片验收</span><i data-lucide="arrow-right" aria-hidden="true"></i><span>用户与付费验证</span><i data-lucide="arrow-right" aria-hidden="true"></i><span>预算与湖南对接</span></div>
+        <div id="taskPlan"></div>
+      </section>
+
+      <section class="report-section" id="sources" aria-labelledby="sourcesHeading">
+        <div class="section-title"><span class="section-number">04</span><h2 id="sourcesHeading">官方资料与项目证据</h2></div>
+        <p>两张评分原图按用户提供的附件保存。公开版保留内部项目证据的名称与摘要，原始项目文档未随站点发布。正文始终区分已实现、规划与未见材料；图片是视觉或功能证据，不替代商业验证。</p>
+        <div class="source-figures"><figure><a href="professional-rubric.png" target="_blank" rel="noopener"><img src="professional-rubric.png" alt="专业评审评分细则原图，五个大项合计100分" width="976" height="1354"></a><figcaption>专业评审细则 / 原图</figcaption></figure><figure><a href="public-rubric.png" target="_blank" rel="noopener"><img src="public-rubric.png" alt="大众评审评分细则原图，四个大项合计100分" width="1012" height="1108"></a><figcaption>大众评审细则 / 原图</figcaption></figure></div>
+        <figure class="runtime-figure"><a href="chapter-3-runtime.png" target="_blank" rel="noopener"><img src="chapter-3-runtime.png" alt="2026年10月22日第三章家中准备阶段的真实运行画面" width="1280" height="720"></a><figcaption>本轮实机：第三章家中准备阶段。仅证明已核验开场路径，整章与手机终验仍待完成。</figcaption></figure>
+        <ul class="source-links"><li><span>当前产品范围与里程碑（内部材料）</span></li><li><span>当前项目交接（内部材料）</span></li><li><span>总体产品策划案（内部材料）</span></li><li><span>代码、测试与验收边界（内部材料）</span></li><li><a href="https://hn-edu-jzz-public.oss-cn-guangzhou.aliyuncs.com/eih/2026-10-13/front_upload/hn-edu-jzz-public/0390e692442e4420abee12692f286810.pdf" target="_blank" rel="noopener">第三届正式通知与附件 <i data-lucide="external-link" aria-hidden="true"></i></a></li><li><a href="https://hnjzz.hunan-data.com/#/competition/seed" target="_blank" rel="noopener">金种子杯官方平台 <i data-lucide="external-link" aria-hidden="true"></i></a></li></ul>
+      </section>
+      <footer class="report-footer"><span>《易安梦华》/ 金种子杯内部评估</span><span id="lastUpdated">评估基线 2026.10.22</span></footer>
+    </main>
+  </div>
+  <dialog id="resetDialog" aria-labelledby="resetTitle"><form method="dialog"><h2 id="resetTitle">恢复初始评估？</h2><p>本页的分数、准备度、任务记录和评估备注将恢复为2026年10月22日的基线。</p><div class="dialog-actions"><button value="cancel">取消</button><button value="confirm" class="primary-button">恢复基线</button></div></form></dialog>
+  <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+  <noscript><p class="noscript">评分内容需要启用JavaScript。官方评分原图仍可直接查看。</p></noscript>
+</body>
+</html>
